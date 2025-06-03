@@ -9,19 +9,26 @@ const answers = document.querySelectorAll('.answer')
 questions.forEach( question => {
     question.addEventListener('click', (e) => {
        const parentDiv = e.currentTarget
+
+       questions.forEach(q => {
+         if (q !== parentDiv) {
+            q.classList.remove('active')
+            q.querySelector('p').classList.add('hidden')
+            const icon = q.querySelector('img')
+            icon.src = '../assets/images/icon-plus.svg'
+            icon.alt = 'Plus Icon'
+         }
+       })
+
        const p = parentDiv.querySelector('p')
        const img = parentDiv.querySelector('img')
-    //    p.classList.contains('hidden') ? p.classList.remove('hidden') : p.classList.add('hidden')
-       if (!parentDiv.classList.contains('active')) {
-            parentDiv.classList.add('active')
-            img.src = '../assets/images/icon-minus.svg'
-            img.alt = 'Minus icon'
-            p.classList.remove('hidden')
-       } else {
-            parentDiv.classList.remove('active')
-            img.src = '../assets/images/icon-plus.svg'
-            img.alt = 'Plus icon'
-            p.classList.add('hidden')
-       }
+
+       const isActive = parentDiv.classList.contains('active')
+       parentDiv.classList.toggle('active')
+       p.classList.toggle('hidden')
+       img.src = isActive
+         ? '../assets/images/icon-plus.svg'
+         : '../assets/images/icon-minus.svg'
+       img.alt = isActive ? 'Plus icon' : 'Minus icon'
     })
 })
