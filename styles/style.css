@@ -30,6 +30,7 @@ body {
     margin-inline: 3rem;
 
     font-family: var(--ff-normal);
+    font-size: 1.3rem;
     line-height: 1.5;
 
     background-image: url('../assets/images/background-pattern-mobile.svg');
@@ -39,6 +40,16 @@ h1 {
     font-size: 3.5rem;
     width: 75%;
     margin-inline-start: 1.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+img {
+    pointer-events: none;
 }
 
 .card-title > img {
@@ -61,8 +72,13 @@ section:not(:last-of-type) {
 
 .question {
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .question > h2 {
     width: 80%;
+}
+
+.hidden {
+    display: none;
 }
