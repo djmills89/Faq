@@ -21,3 +21,48 @@
 html {
     font-size: 62.5%;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-inline: 3rem;
+
+    font-family: var(--ff-normal);
+    line-height: 1.5;
+
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+}
+
+h1 {
+    font-size: 3.5rem;
+    width: 75%;
+    margin-inline-start: 1.5rem;
+}
+
+.card-title > img {
+    width: 2.5rem;
+}
+
+section:not(:last-of-type) {
+    border-bottom: 2px solid var(--purple-100);
+}
+
+.card {
+    background-color: var(--card-bg-white);
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.card-title, .question {
+    display: flex;
+}
+
+.question {
+    justify-content: space-between;
+}
+
+.question > h2 {
+    width: 80%;
+}
