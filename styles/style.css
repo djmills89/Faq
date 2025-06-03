@@ -36,7 +36,7 @@ body {
 
     background-color: var(--purple-100);
     background-image: url('../assets/images/background-pattern-mobile.svg');
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 }
 
 h1 {
