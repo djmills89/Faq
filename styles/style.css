@@ -36,7 +36,7 @@ body {
 
     background-color: var(--purple-100);
     background-image: url('../assets/images/background-pattern-mobile.svg');
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -82,7 +82,7 @@ section:not(:last-of-type) {
     background-color: var(--card-bg-white);
     padding: 3rem;
     border-radius: 1rem;
-    max-width: 425px;
+    max-width: 42.5rem;
 }
 
 .card-title, .question-header {
@@ -102,8 +102,9 @@ section:not(:last-of-type) {
     display: none;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 23.5rem) {
     body {
         background-image: url('../assets/images/background-pattern-desktop.svg');
+        background-repeat: repeat-x;
     }
 }
